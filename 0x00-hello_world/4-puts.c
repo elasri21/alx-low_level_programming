@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
- * This is the main function. It serves as the entry point for the program.
+ * main - A program that prints a line with puts function
  * return 0 (Success)
  */
 int  main(void)
