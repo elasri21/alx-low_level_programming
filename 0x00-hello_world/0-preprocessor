@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE=0-main.c ;
+CFILE="main.c"; OUTPUT_FILE="c";gcc -E "$CFILE" -o "$OUTPUT_FILE"
