@@ -14,7 +14,8 @@ srand(time(0));
 n = rand() - RAND_MAX / 2;
 char str[50];
 sprintf(str, "%d", n);
-char last = str[strlen(str) - 1];
+char last;
+last = str[strlen(str) - 1];
 if (last > '0' && last < '6')
 {
 printf("Last digit of %d is %c and is less than 6 and not 0", n, last);
