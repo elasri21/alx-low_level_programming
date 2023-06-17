@@ -17,15 +17,19 @@ sprintf(str, "%d", n);
 char last[3] = "";
 if (str[0] == '-')
 {
-last += str[0];
+last[0] = str[0];
+last[1] = str[strlen(str) - 1];
 }
-last += str[strlen(str) - 1];
+else
+{
+last[0] = str[strlen(str) - 1];
+}
 int lastDigit = atoi(last);
-if (lastDigit > 0 && last < 6)
+if (lastDigit > 0 && lastDigit < 6)
 {
 printf("Last digit of %d is %d and is less than 6 and not 0", n, lastDigit);
 }
-else if (last > 5)
+else if (lastDigit > 5)
 {
 printf("Last digit of %d is %d and is greater than 5 and not 0", n, lastDigit);
 }
