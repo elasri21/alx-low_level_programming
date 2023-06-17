@@ -10,11 +10,12 @@
 int main(void)
 {
 int n;
+int lastDigit;
+char str[50];
+char last[3] = "";
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-char str[50] = "";
 sprintf(str, "%d", n);
-char last[3] = "";
 if (str[0] == '-')
 {
 last[0] = str[0];
@@ -24,7 +25,7 @@ else
 {
 last[0] = str[strlen(str) - 1];
 }
-int lastDigit = atoi(last);
+lastDigit = atoi(last);
 if (lastDigit > 0 && lastDigit < 6)
 {
 printf("Last digit of %d is %d and is less than 6 and not 0", n, lastDigit);
