@@ -12,7 +12,7 @@ int main(void)
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-char str[50];
+char str[50] = "";
 sprintf(str, "%d", n);
 char last[3] = "";
 if (str[0] == '-')
