@@ -20,7 +20,7 @@ if (i < j && j < s)
 putchar(i);
 putchar(j);
 putchar(s);
-if (i != '8')
+if (i != '7')
 {
 putchar(',');
 putchar(' ');
