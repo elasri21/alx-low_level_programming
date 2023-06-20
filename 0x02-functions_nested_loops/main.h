@@ -1,1 +1,1 @@
-#define int _putchar(char c);
+#define int * _putchar(char c);
