@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  * main - Entry point.
  *
@@ -14,6 +15,6 @@ for (i = 0; i < 8;i++)
 {
 _putchar(test[i]);
 }
-putchar("\n");
+putchar('\n');
 return (0);
 }
