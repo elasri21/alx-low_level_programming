@@ -5,6 +5,9 @@
  * Return: 1 if so and 0 if not.
  */
 int _islower(int c)
+/**
+ * c: c is ASCII code of a character
+ */
 {
 if (c >= 'a' && c <= 'z')
 {
