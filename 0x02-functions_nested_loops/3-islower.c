@@ -5,6 +5,8 @@
  * 'c' represents the character to be checked for lowercase
  *
  * Return 1 if 'c' is lowercase, otherwise return 0
+ *
+ * 'c' represents the character to be checked for lowercase
  */
 int _islower(int c)
 {
