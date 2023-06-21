@@ -9,15 +9,8 @@
  */
 int print_last_digit(int n)
 {
-int i;
 char strNum[20];
 sprintf(strNum, "%d", n);
-for (i = 0; i < strlen(strNum); i++)
-{
-if (strNum[i] == '\0')
-{
-_putchar(strNum[i - 1]);
-return strNum[i - 1];
-}
-}
+_putchar(strNum[strlen(strNum) - 1]);
+return strNum[strlen(strNum) - 1];
 }
