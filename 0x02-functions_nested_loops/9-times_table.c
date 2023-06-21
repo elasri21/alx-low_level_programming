@@ -15,11 +15,11 @@ for (j = 0; j < 10; j++)
 printf("%d", i * j);
 if (j != 9 && i * j < 10)
 {
-printf(",  ");
+printf(",   ");
 }
 else if (j != 9 && i * j >= 10)
 {
-printf(", ");	
+printf (", ");	
 }
 }
 printf("\n");
