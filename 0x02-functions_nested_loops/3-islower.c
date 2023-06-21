@@ -3,7 +3,7 @@
  * _islower - checks if a char is lowercase.
  *
  * Check if the character is a lowercase letter.
- * @Parameter: c: the character to be checked (must be a lowercase letter)
+ * @Parameterc: the character to be checked (must be a lowercase letter)
  * Return: 1 if  true, otherwise return 0
  */
 int _islower(int c)
