@@ -11,5 +11,6 @@ int print_last_digit(int n)
 {
 char strNum[20];
 sprintf(strNum, "%d", n);
+_putchar(strNum[strlen(strNum) - 1]);
 return strNum[strlen(strNum) - 1];
 }
