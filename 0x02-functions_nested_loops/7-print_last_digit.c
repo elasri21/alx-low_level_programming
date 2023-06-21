@@ -14,10 +14,10 @@ char strNum[20];
 sprintf(strNum, "%d", n);
 for (i = 0; i < strlen(strNum); i++)
 {
-if (strNum[strlen(strNum)] == '\0')
+if (strNum[i] == '\0')
 {
 _putchar(strNum[i - 1]);
-return strNum[i];
+return strNum[i - 1];
 }
 }
 }
