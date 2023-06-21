@@ -13,9 +13,12 @@ int i;
 char strNum[20];
 char str[20];
 sprintf(strNum, "%d", n);
-for (i = 0; i < strlen(strNum); i++)
+for (i = 0; i < 20; i++)
+{
+if (strNum[i] != '\0')
 {
 str[i] = strNum[i];
+}
 }
 _putchar(str[strlen(str) - 1]);
 return str[strlen(str) - 1];
