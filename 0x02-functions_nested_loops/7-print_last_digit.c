@@ -15,7 +15,7 @@ char str[20];
 sprintf(strNum, "%d", n);
 for (i = 0; i < 20; i++)
 {
-if (strNum[i] != '\0')
+if (strNum[i] >= '0' && strNum[i] <='9')
 {
 str[i] = strNum[i];
 }
