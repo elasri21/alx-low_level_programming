@@ -1,6 +1,7 @@
 #include "main.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdlib>
 /**
  * print_last_digit - prints the last digit of a number.
  * @n: The number to be processed
@@ -17,5 +18,5 @@ while (strNum[i])
 i++;
 }
 _putchar(strNum[i- 1]);
-return +strNum[i - 1];
+return atoi(&strNum[i - 1]);
 }
