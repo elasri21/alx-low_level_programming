@@ -13,10 +13,12 @@ int i;
 char strNum[20];
 sprintf(strNum, "%d", n);
 for (i = 0; i < strlen(strNum); i++)
+{
 if (i == strlen(strNum) - 1)
 {
 _putchar(strNum[i]);
 break;
+}
 }
 return strNum[i];
 }
