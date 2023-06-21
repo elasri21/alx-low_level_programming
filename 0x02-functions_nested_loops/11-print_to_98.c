@@ -22,9 +22,10 @@ else
 printf("%d", i);
 }
 }
-} else 
+}
+else
 {
-for (i= n; i >= 98; i--)
+for (i = n; i >= 98; i--)
 {
 if (i != 98)
 {
