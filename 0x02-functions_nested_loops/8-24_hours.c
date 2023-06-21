@@ -23,6 +23,7 @@ _putchar(':');
 else
 {
 _putchar(s1[0]);
+_putchar(s1[1]);
 _putchar(':');
 }
 if (j < 10)
@@ -33,6 +34,7 @@ _putchar(s2[0]);
 else
 {
 _putchar(s2[0]);
+_putchar(s2[1]);
 }
 _putchar('\n');
 }
