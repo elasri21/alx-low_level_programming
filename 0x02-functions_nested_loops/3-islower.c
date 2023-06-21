@@ -2,7 +2,9 @@
 /**
  * _islower - checks if a char is lowercase.
  *
- * c: represents the character to be checked for lowercase
+ * Check if the character is a lowercase letter.
+   Parameters:
+ * c: the character to be checked (must be a lowercase letter)
  *
  * Return: 1 if  true, otherwise return 0
  */
