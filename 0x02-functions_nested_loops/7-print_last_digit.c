@@ -11,7 +11,6 @@ int print_last_digit(int n)
 {
 int i = 0;
 char strNum[20];
-char str[20];
 sprintf(strNum, "%d", n);
 while (strNum[i])
 {
