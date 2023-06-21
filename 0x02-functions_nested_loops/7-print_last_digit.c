@@ -17,5 +17,5 @@ while (strNum[i])
 i++;
 }
 _putchar(strNum[i- 1]);
-return strNum[i - 1];
+return +strNum[i - 1];
 }
