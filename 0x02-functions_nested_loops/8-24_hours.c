@@ -13,7 +13,7 @@ for (j = 0; j < 60; j++)
 {
 char s1[2], s2[2];
 sprintf(s1, "%d", i);
-sprintf(s2, "%d", j)
+sprintf(s2, "%d", j);
 if (i < 10)
 {
 _putchar('0');
