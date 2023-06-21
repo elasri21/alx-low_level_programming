@@ -17,6 +17,6 @@ while (strNum[i])
 {
 i++;
 }
-_putchar(strNum[i- 1]);
-return atoi(&strNum[i - 1]);
+_putchar(strNum[i - 1]);
+return (atoi(&strNum[i - 1]));
 }
