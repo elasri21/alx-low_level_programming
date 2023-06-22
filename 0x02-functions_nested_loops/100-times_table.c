@@ -45,8 +45,8 @@ else
 {
 printf(" %d", i * j);
 }
-}    
-}    
+}   
+}
 printf("\n");
 }
 }
