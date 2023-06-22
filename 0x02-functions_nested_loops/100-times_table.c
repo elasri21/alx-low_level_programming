@@ -17,7 +17,7 @@ for (j = 0; j <= n; j++)
 {
 if (j == 0)
 {
-printf("%d,", i * n);
+printf("%d,", i * j);
 }
 else if (j != n && i * j < 10)
 {
@@ -25,7 +25,7 @@ printf("   %d,", i * j);
 }
 else if (j != n && i * j >= 10 && i * j < 100)
 {
-printf("  %d,", i * i);
+printf("  %d,", i * j);
 }
 else if (j != n)
 {
@@ -33,10 +33,9 @@ printf(" %d,", i * j);
 }
 else if (j == n)
 {
-if (i * j < 10) {
+if (i * j < 10)
 {
 printf("   %d", i * j);
-}
 }
 else if (i * j < 100)
 {
@@ -46,9 +45,9 @@ else
 {
 printf(" %d", i * j);
 }
-}
-}
-}
+}    
+}    
 printf("\n");
+}
 }
 }
