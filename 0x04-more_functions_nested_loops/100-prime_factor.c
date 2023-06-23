@@ -22,6 +22,6 @@ if (s == 0)
 tmp = i;
 }
 }
-printf("%ld", tmp);
+printf("%ld\n", tmp);
 return (0);
 }
