@@ -7,11 +7,12 @@
 int main(void)
 {
 long int n = 612852475143;
-long int j, i, tmp, s = 0;
+long int j, i, tmp, s;
 for (i = 1; i <= n; i++)
 {
 if (n % i == 0)
 {
+s = 0;
 for (j = 2; j < i; j++)
 {
 if (i % j == 0)
