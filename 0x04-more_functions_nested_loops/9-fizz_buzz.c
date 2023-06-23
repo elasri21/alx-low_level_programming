@@ -16,10 +16,9 @@ printf("%s ", "Fizz");
 else if (i % 5 == 0 && i != 100)
 printf("%s ", "Buzz");
 else if (i % 5 == 0 && i == 100)
-printf("%s", "Buzz");
+printf("%s\n", "Buzz");
 else
 printf("%d ", i);
 }
-printf("\n");
 return (0);
 }
