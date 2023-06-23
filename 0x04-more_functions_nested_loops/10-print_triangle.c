@@ -19,6 +19,7 @@ _putchar('#');
 else if (j <= i)
 _putchar(' ');
 }
+if (i != 1)
 _putchar('\n');
 }
 }
