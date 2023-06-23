@@ -9,7 +9,7 @@ void print_triangle(int size)
 int i, j;
 if (size > 0)
 {
-for (i = size; i >= 0; i--)
+for (i = size; i >= 1; i--)
 {
 for (j = 1; j <= size; j++)
 {
