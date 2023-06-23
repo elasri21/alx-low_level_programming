@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * main holds the script
  *
@@ -21,6 +20,6 @@ printf("%s", "Buzz");
 else
 printf("%d ", i);
 }
-_putchar('\n');
+printf("\n");
 return (0);
 }
