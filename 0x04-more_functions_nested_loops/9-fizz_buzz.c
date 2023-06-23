@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main holds the script
+ * main - holds the script
  *
  * Return: Always 0.
  */
