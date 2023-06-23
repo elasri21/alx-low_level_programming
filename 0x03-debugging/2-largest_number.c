@@ -24,10 +24,5 @@ else if (c > a && a > b)
 {
 largest = c;
 }
-else if (c > b && a > b)
-{
-largest = c;
-}
-
 return (largest);
 }
