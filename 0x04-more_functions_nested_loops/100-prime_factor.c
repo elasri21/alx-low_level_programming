@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-long int n = 612852475143, j, s = 0, i, tmp;
+long int n = 612852475143;
+long int j, i, tmp, s = 0;
 for (i = 1; i <= n; i++)
 {
 if (n % i == 0)
@@ -14,9 +15,7 @@ if (n % i == 0)
 for (j = 2; j < i; j++)
 {
 if (i % j == 0)
-{
 s++;
-}
 }
 if (s == 0)
 tmp = i;
