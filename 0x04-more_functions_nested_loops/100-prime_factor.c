@@ -17,10 +17,10 @@ if (i % j == 0)
 {
 s++;
 }
+}
+}
 if (s == 0)
 tmp = i;
-}
-}
 }
 printf("%ld", tmp);
 return (0);
