@@ -1,0 +1,4 @@
+#!/bin/bash
+read -p main.c CFILE
+ASMFILE="${CFILE%.*}.s"
+gcc -S -masm=intel "$CFILE" -o "$ASMFILE"
