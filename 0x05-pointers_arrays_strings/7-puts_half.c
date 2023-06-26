@@ -11,7 +11,7 @@ int len = strlen(str), newLen, i;
 if (len % 2 == 0)
 newLen = len / 2;
 else
-newLen = (len - 1) / 2;
+newLen = len - ((len - 1) / 2);
 for (i = newLen; i < len; i++)
 {
 _putchar(str[i]);
