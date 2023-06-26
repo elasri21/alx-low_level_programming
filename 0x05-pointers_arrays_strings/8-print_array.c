@@ -19,4 +19,8 @@ else
 printf("%d\n", a[i]);
 }
 }
+else
+{
+printf("\n");
+}
 }
