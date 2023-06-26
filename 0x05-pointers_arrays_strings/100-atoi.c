@@ -11,8 +11,18 @@ int _atoi(char *s)
 int i, tmp;
 char *strNum = "";
 for (i = 0; s[i] != '\0'; i++)
+{ 
+if ((s[i] >= '0' && s[i] <= '9') && (s[i + 1] >= '0' && s[i + 1] <= '9'))
 {
-if (s[i] >= '0' && s[i] <= '9')
+if (s[i - 1] == '+' || s[i - 1] == '-')
+{
+strNum += s[i - 1];
+strNum += s[i];
+}
+else
+strNum += s[i];
+}
+else if (s[i] >= '0' && s[i] <= '9')
 {
 if (s[i - 1] == '+' || s[i - 1] == '-')
 {
