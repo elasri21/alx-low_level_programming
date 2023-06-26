@@ -31,6 +31,7 @@ strNum += s[i];
 }
 else
 strNum += s[i];
+break;
 }
 }
 if (strlen(strNum) < 1)
