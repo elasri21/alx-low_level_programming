@@ -28,8 +28,10 @@ if ((tmp[0] == '-' && s[i] == '+') || (tmp[0] == '+' && s[i] == '-'))
 {
 tmp[0] = '-';
 }
-else if (tmp[0] == s[i]){
-continue;
+else if (tmp[0] == s[i])
+{
+tmp[0] = '\0';
+j = 0;
 }
 }
 else
