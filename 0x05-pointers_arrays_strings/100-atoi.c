@@ -24,11 +24,14 @@ j++;
 }
 else if (j == 0 && (s[i] == '+' || s[i] == '-'))
 {
-tmp[j] = s[i];
-j++;
+if ((tmp[0] == '-' && s[i] == '+') || (tmp[0] == '+' && s[i] == '-'))
+{
+tmp[0] = '-';
 }
-else if (j == 0)
+else if (tmp[0] == s[i]){
 continue;
+}
+}
 else
 break;
 }
