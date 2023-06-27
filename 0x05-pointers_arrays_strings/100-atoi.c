@@ -9,7 +9,40 @@
  */
 int _atoi(char *s)
 {
-int tmp;
-tmp = atoi(s);
-return (tmp);
+int i, res = 0, j = 0, len = strlen(s);
+char tmp[100];
+for (i = 0; i < len; i++)
+{
+if (s[i] != '+' && s[i] != '-' && s[i] < '0' && s[i] > '9' && strlen(tmp) != 0)
+break;
+else if (s[i] == '+' || s[i] == '-')
+{
+if (i + 1 != len && s[i + 1] >= '0' && s[i + 1] <= '9')
+{
+tmp[j] = s[i];
+j++;
+}
+else
+break;
+}
+else if (s[i] >= '0' && s[i] <= '9')
+{
+if (s[i + 1] >= '0' && s[i + 1] <= '9')
+{
+tmp[j] = s[i];
+j++;
+}
+else
+{
+tmp[j] = s[i];
+j++;
+break;
+}
+}
+else
+continue;
+}
+tmp[j] = '\0';
+sscanf(tmp, "%d", &res);
+return (res);
 }
