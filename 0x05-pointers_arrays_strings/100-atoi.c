@@ -22,6 +22,11 @@ if (i + 1 != len && s[i + 1] >= '0' && s[i + 1] <= '9')
 tmp[j] = s[i];
 j++;
 }
+else if (j == 0 && (s[i] == '+' || s[i] == '-'))
+{
+tmp[j] = s[i];
+j++;
+}
 else if (j == 0)
 continue;
 else
