@@ -48,6 +48,6 @@ break;
 }
 }
 tmp[j] = '\0';
-sscanf(tmp, "%d", &res);
+kstrtoint(tmp, 10, &res);
 return (res);
 }
