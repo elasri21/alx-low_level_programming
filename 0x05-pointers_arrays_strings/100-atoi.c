@@ -9,7 +9,7 @@
  */
 int _atoi(char *s)
 {
-int i, j = 0, len = strlen(s);
+int i, res = 0, j = 0, len = strlen(s);
 char tmp[100];
 for (i = 0; i < len; i++)
 {
@@ -47,5 +47,6 @@ break;
 }
 }
 tmp[j] = '\0';
-return (*tmp - '0');
+sscanf(tmp, "%d", &res);
+return (res);
 }
