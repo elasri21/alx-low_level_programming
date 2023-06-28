@@ -1,4 +1,5 @@
 #include "main.h"
+#include <linux/kernel.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -47,6 +48,6 @@ break;
 }
 }
 tmp[j] = '\0';
-sscanf(tmp, "%d", &res);
+kstrtoi(tmp, 10, &res);
 return (res);
 }
