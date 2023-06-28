@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <linux/string.h>
 /**
  * _atoi - convert a string to an integer
  * @s: string to convert
@@ -48,6 +47,6 @@ break;
 }
 }
 tmp[j] = '\0';
-kstrtoint(tmp, 10, &res);
+sscanf(tmp, "%d", &res);
 return (res);
 }
