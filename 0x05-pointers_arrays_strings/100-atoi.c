@@ -48,6 +48,6 @@ break;
 }
 }
 tmp[j] = '\0';
-kstrtoi(tmp, 10, &res);
+kstrtoint(tmp, 10, &res);
 return (res);
 }
