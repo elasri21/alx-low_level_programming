@@ -1,5 +1,4 @@
 #include "main.h"
-#include <linux/kernel.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -10,7 +9,7 @@
  */
 int _atoi(char *s)
 {
-int i, res = 0, j = 0, len = strlen(s);
+int i, j = 0, len = strlen(s);
 char tmp[100];
 for (i = 0; i < len; i++)
 {
@@ -48,6 +47,5 @@ break;
 }
 }
 tmp[j] = '\0';
-kstrtoint(tmp, 10, &res);
-return (res);
+return (*tmp - '0');
 }
