@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <linux/string.h>
 /**
  * _atoi - convert a string to an integer
  * @s: string to convert
