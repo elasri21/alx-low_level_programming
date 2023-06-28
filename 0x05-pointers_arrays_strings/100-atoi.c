@@ -13,52 +13,34 @@ int i, res = 0, j = 0, len = strlen(s);
 char tmp[100];
 for (i = 0; i < len; i++)
 {
-if (s[i] != '+' && s[i] != '-' && s[i] < '0' && s[i] > '9' && strlen(tmp) != 0)
+if (s[i] != '+' && s[i] != '-' && s[i] < '0' && s[i] > '9')
+{
+if (s[i + 1])
+continue;
+else
 break;
-else if (s[i] == '+' || s[i] == '-')
-{
-if (i + 1 != len && s[i + 1] >= '0' && s[i + 1] <= '9')
+}
+else if (s[i] == '+' && j == 0)
+continue;
+else if (s[i] == '-' && j == 0)
 {
 tmp[j] = s[i];
 j++;
 }
-else if (j == 0 && (s[i] == '+' || s[i] == '-'))
-{
-tmp[j] = s[i];
-j++;
-}
-else if ((j != 0) && ((tmp[0] == '-' && s[i] == '+') || (tmp[0] == '+' && s[i] == '-')))
-{
-tmp[0] = '-';
-}
-else if ((tmp[0] == s[i]) && tmp[0] == '-')
-{
-tmp[0] = '-';
-}
-else if ((tmp[0] == s[i]) && tmp[0] == '+')
+else if (s[i] == '+' && j == 1)
+continue;
+else if (tmp[0] == '-' && s[i] == '-' && j == 1)
 {
 tmp[0] = '\0';
-j = 0;
+j--;
 }
-else
-break;
-}
+else if (j > 1 && (s[i] == '+' || s[i] == '-'))
+continue;
 else if (s[i] >= '0' && s[i] <= '9')
 {
-if (s[i + 1] >= '0' && s[i + 1] <= '9')
-{
 tmp[j] = s[i];
 j++;
 }
-else
-{
-tmp[j] = s[i];
-j++;
-break;
-}
-}
-else
-continue;
 }
 tmp[j] = '\0';
 sscanf(tmp, "%d", &res);
