@@ -8,7 +8,7 @@
 char *cap_string(char *s)
 {
 int i, j, len = strlen(s);
-char spec[] = {'\n', '\t', '.', ',', '?', '!', ';', '"', '(', ')', ' ', '{', '}'};
+char spec[]{'\n', '\t', '.', ',', '?', '!', ';', '"', '(', ')', ' ', '{', '}'};
 int l2 = strlen(spec);
 for (i = 0; i < len; i++)
 {
