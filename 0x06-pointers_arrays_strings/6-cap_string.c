@@ -12,9 +12,9 @@ char spec[] = {'\n', '\t', '.', ',', '?', '!', ';', '"', '(', ')', ' ', '{', '}'
 int l2 = strlen(spec);
 for (i = 0; i < len; i++)
 {
-for (j = 0; j < l2;j++)
+for (j = 0; j < l2; j++)
 {
-if(i + 1 != len && (s[i] == spec[j]))
+if (i + 1 != len && (s[i] == spec[j]))
 {
 if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
 {
