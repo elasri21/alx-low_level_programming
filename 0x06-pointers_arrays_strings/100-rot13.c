@@ -7,8 +7,8 @@
  */
 char *rot13(char *s)
 {
-char *sl = "abcdefghigklmABCDEFGHIGKLMnopqrstuvwxyzNOPQRSTUVWXYZ";
-char *bl = "nopqrstuvwxyzNOPQRSTUVWXYZabcdefghigklmABCDEFGHIGKLM";
+char *sl = "abcdefghijklmABCDEFGHIJKLMnopqrstuvwxyzNOPQRSTUVWXYZ";
+char *bl = "nopqrstuvwxyzNOPQRSTUVWXYZabcdefghijklmABCDEFGHIJKLM";
 int i, j, len = strlen(s), l2 = strlen(sl);
 for (i = 0; i < len; i++)
 {
