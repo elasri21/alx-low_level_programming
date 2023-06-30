@@ -14,7 +14,7 @@ for (i = 0; i < len; i++)
 {
 for (j = 0; j < l2; j++)
 {
-if (s[i] == sl[j])i
+if (s[i] == sl[j])
 {
 s[i] = bl[j];
 break;
