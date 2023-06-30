@@ -7,8 +7,8 @@
  */
 char *leet(char *s)
 {
-char* ns = "43071";
-char* ltt = "aeotl";
+char *ns = "43071";
+char *ltt = "aeotl";
 int i, j, len = strlen(s), l2 = strlen(ns);
 for (i = 0; i < len; i++)
 {
