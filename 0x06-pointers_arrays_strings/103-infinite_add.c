@@ -17,7 +17,7 @@ sscanf(n2, "%d", &j);
 sum = i + j;
 sprintf(r, "%d", sum);
 l = strlen(r);
-if (size_r > l)
+if (size_r > l + 1)
 {
 return "0";
 }
