@@ -11,13 +11,13 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int i, j, sum = 0;
+int i, j, l, sum = 0;
 sscanf(n1, "%d", &i);
 sscanf(n2, "%d", &j);
 sum = i + j;
 sprintf(r, "%d", sum);
-size_r = strlen(r);
-if (size_r < 1)
+l = strlen(r);
+if (size_r > l)
 {
 return "0";
 }
