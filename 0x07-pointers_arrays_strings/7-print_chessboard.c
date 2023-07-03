@@ -15,8 +15,7 @@ for (j = 0; j < 8;j++)
 {
 if (i >= 2 && i <= 5)
 {
-_putchar('\n');
-break;
+_putchar(' ');
 }
 else
 {
