@@ -13,5 +13,5 @@ s = strchr(s, c);
 if (s != NULL)
 return (s);
 else
-return NULL;
+return (NULL);
 }
