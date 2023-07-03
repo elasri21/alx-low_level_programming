@@ -4,6 +4,7 @@
 /**
  * _memcpy - copies memory area
  * @dest: destination memory
+ * @src: source memory
  * @n: size
  * Return: string
  */
