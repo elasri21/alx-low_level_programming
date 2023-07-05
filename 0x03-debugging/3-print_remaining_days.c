@@ -16,7 +16,8 @@ if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
 if (month >= 3 && day >= 60)
 {
 day++;
-}printf("Day of the year: %d\n", day);
+}
+printf("Day of the year: %d\n", day);
 printf("Remaining days: %d\n", 366 - day);
 }
 else
