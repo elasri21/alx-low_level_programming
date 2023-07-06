@@ -13,7 +13,7 @@ int mid, square;
 if (start > end)
 return (end);
 mid = (start + end) / 2;
-square = mid * mid;
+square =( mid * mid);
 if (square == num)
 return (mid);
 else if ((mid + 1 + end) / 2 == mid || (start + mid - 1) / 2 == mid)
