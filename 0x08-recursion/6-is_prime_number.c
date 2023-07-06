@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * is_prime_number - check if an integer is prime
- * @n: integer to check
+ * is_prime_number1 - check if an integer
+ * @n: anteger
+ * @divisor: integer
  * Return: integer.
  */
 int is_prime_number1(int n, int divisor)
@@ -15,6 +16,11 @@ return (0);
 else
 return (is_prime_number1(n, divisor - 1));
 }
+/**
+ * is_prime_number - check if an integer is prime
+ * @n: integer to check
+ * Return: integer.
+ */
 int is_prime_number(int n)
 {
 return (is_prime_number1(n, n / 2));
