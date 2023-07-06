@@ -26,12 +26,14 @@ return (sqrtRecursive(num, start, mid - 1));
 
 /**
  * _sqrt_recursion -  returns the natural square root of a number.
- * @n: base integer
+ * @num: base integer
  * Return: integer
  */
 int _sqrt_recursion(int num)
 {
 if (num < 0)
 return (-1);
+if (num == 1)
+return (1);
 return (sqrtRecursive(num, 0, num));
 }
