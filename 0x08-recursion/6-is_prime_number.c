@@ -4,14 +4,18 @@
  * @n: integer to check
  * Return: integer.
  */
-int j = 2;
+int is_prime_number1(int n, int divisor)
+{
+if (n <= 1)
+return (0);
+if (divisor == 1)
+return (1);
+if (n % divisor == 0)
+return (0);
+else
+return (is_prime_number1(n, divisor - 1));
+}
 int is_prime_number(int n)
 {
-if (n < 2 || n % j == 0)
-return (0);
-if (j * j > n)
-return (1);
-if (n % j != 0)
-j++;
-return (is_prime_number(n));
+return (is_prime_number1(n, n / 2));
 }
