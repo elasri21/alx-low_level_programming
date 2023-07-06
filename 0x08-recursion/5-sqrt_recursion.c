@@ -16,8 +16,6 @@ mid = (start + end) / 2;
 square =( mid * mid);
 if (square == num)
 return (mid);
-else if ((mid + 1 + end) / 2 == mid || (start + mid - 1) / 2 == mid)
-return (-1);
 else if (square < num)
 return (sqrtRecursive(num, mid + 1, end));
 else
