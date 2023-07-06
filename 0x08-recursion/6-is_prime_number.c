@@ -4,9 +4,9 @@
  * @n: integer to check
  * Return: integer.
  */
+int j = 2;
 int is_prime_number(int n)
 {
-static int j = 2;
 if (n < 2 || n % j == 0)
 return (0);
 if (j * j > n)
