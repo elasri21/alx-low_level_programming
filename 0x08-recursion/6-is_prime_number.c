@@ -6,16 +6,12 @@
  */
 int is_prime_number(int n)
 {
-int i = 0, j;
-if (n < 2)
+static int j = 2;
+if (n < 2 || n % j == 0)
 return (0);
-for (j = 2; j < n; j++)
-{
-if (n % j == 0)
-i++;
-}
-if (i > 0)
-return (0);
-else
+if (j * j > n)
 return (1);
+if (n % j != 0)
+j++;
+return (is_prime_number(n));
 }
