@@ -37,5 +37,5 @@ int is_palindrome(char *s)
 {
 int start = 0;
 int end = strlen(s) - 1;
-return is_pal(s, start, end);
+return (is_pal(s, start, end));
 }
