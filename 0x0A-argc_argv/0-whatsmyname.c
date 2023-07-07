@@ -13,7 +13,11 @@ char *name = argv[0];
 char *lastSeparator = strrchr(name, '/');
 if (lastSeparator != NULL)
 {
-name = lastSeparator + 1;
+name++;
+}
+else
+{
+name = argv[0];
 }
 printf("%s\n", name);
 return (argc);
