@@ -10,15 +10,6 @@
 int main(int argc, char *argv[])
 {
 char *name = argv[0];
-char *lastSeparator = strrchr(name, '/');
-if (lastSeparator != NULL)
-{
-name++;
-}
-else
-{
-name = argv[0];
-}
 printf("%s\n", name);
 return (argc);
 }
