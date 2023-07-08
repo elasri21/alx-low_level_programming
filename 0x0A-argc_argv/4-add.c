@@ -29,6 +29,8 @@ else if (n >= 0)
 {
 result = result + n;
 }
+else
+continue;
 }
 printf("%d\n", result);
 return (0);
