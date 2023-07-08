@@ -25,12 +25,10 @@ if (!n)
 printf("Error\n");
 return (1);
 }
-else if (n >= 0)
+else
 {
 result = result + n;
 }
-else
-continue;
 }
 printf("%d\n", result);
 return (0);
