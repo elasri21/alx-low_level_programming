@@ -6,13 +6,13 @@
  * main - main function
  * @argc: number of arguments
  * @argv: array of arguments
- * Return: 0 if aggc > 0. 1 otherwise
+ * Return: 0 on success0. 1 otherwise
  */
 
 int main(int argc, char *argv[])
 {
 int result = 0, i;
-if (argc == 1)
+if (argc < 3)
 {
 printf("%d\n", 0);
 return (0);
