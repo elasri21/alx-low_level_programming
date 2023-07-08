@@ -12,7 +12,11 @@
 int main(int argc, char *argv[])
 {
 int n1, n2, result = 0;
-(void)argc;
+if (argc == 1)
+{
+printf("Error\n");
+return (1);
+}
 n1 = atoi(argv[1]);
 n2 = atoi(argv[2]);
 if (n1 != (int)n1 || n2 != (int)n2)
