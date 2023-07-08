@@ -25,7 +25,7 @@ if (!n)
 printf("Error\n");
 return (1);
 }
-else
+else if (n > 0)
 {
 result = result + n;
 }
