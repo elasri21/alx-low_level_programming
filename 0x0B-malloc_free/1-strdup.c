@@ -14,7 +14,9 @@ int i, len = strlen(str);
 char *newStr;
 if (str == NULL)
 return (str);
-newStr = (char*)malloc(sizeof(char) * len + 1);
+else
+{
+newStr = (char *)malloc(sizeof(char) * len + 1);
 for (i = 0; i <= len; i++)
 {
 newStr[i] = str[i];
@@ -22,4 +24,5 @@ newStr[i] = str[i];
 if (newStr == NULL)
 return (NULL);
 return (newStr);
+}
 }
