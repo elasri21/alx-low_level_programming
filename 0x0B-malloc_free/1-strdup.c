@@ -14,7 +14,7 @@ int i, len = strlen(str);
 char *newStr;
 if (str == NULL)
 return (str);
-newStr = malloc(sizeof(char) * len + 1);
+newStr = (char*)malloc(sizeof(char) * len + 1);
 for (i = 0; i <= len; i++)
 {
 newStr[i] = str[i];
