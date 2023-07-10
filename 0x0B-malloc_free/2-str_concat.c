@@ -13,25 +13,16 @@ char *str_concat(char *s1, char *s2)
 {
 if (s1 == NULL && s2 == NULL)
 return ("");
-else
+if (s1 == NULL && s2 != NULL)
+return (s2);
+if (s1 != NULL && s2 == NULL)
+return (s1);
+if (s1 != NULL && s2 != NULL)
 {
 char *s;
-if (s1 == NULL && s2 != NULL)
-{
-s = (char *)malloc(sizeof(char) * +strlen(s2) + 1);
-strcpy(s, s2);
-}
-else if (s1 != NULL && s2 == NULL)
-{
-s = (char *)malloc(sizeof(char) * strlen(s1) + 1);
-strcpy(s, s1);
-}
-else
-{
 s = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2)) + 1);
 strcpy(s, s1);
 strcat(s, s2);
-}
 return (s);
 }
 return (NULL);
