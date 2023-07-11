@@ -22,7 +22,7 @@ for (j = 0; j < l; j++)
 len++;
 }
 }
-s = (char *)malloc(sizeof(char) * len + ac);
+s = (char *)malloc(sizeof(char) * len + ac + 1);
 if (s == NULL)
 return (NULL);
 for (i = 0; i < ac; i++)
