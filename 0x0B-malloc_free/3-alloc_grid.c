@@ -28,6 +28,7 @@ for (i = 0; i < height; i++)
 {
 if (grid[i] == NULL)
 {
+free(grid[i]);
 free(grid);
 return (NULL);
 }
