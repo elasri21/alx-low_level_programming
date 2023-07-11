@@ -4,13 +4,13 @@
 #include <string.h>
 /**
  * argstostr - concatenates all the arguments of your program.
- * @ar: Number of arguments
+ * @ac: Number of arguments
  * @av: array of arguments
  * Return: string
  */
 char *argstostr(int ac, char **av)
 {
-int i, j, len;
+int i, j, len = 0;
 char *s;
 if (ac == 0 || av == NULL)
 return (NULL);
