@@ -24,5 +24,7 @@ s2 = "";
 s = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2)) + 1);
 strcpy(s, s1);
 strcat(s, s2);
+if (s == NULL)
+return (NULL);
 return (s);
 }
