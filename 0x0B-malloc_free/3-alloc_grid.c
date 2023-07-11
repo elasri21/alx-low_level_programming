@@ -28,6 +28,8 @@ for (j = 0; j <= i; j++)
 {
 free(grid[j]);
 }
+free(grid);
+return (NULL);
 }
 }
 for (i = 0; i < height; i++)
