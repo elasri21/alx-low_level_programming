@@ -20,6 +20,9 @@ return (NULL);
 for (i = 0; i < height; i++)
 {
 grid[i] = (int *)malloc(sizeof(int) * width);
+}
+for (i = 0; i < height; i++)
+{
 if (grid[i] == NULL)
 return (NULL);
 }
