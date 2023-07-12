@@ -15,6 +15,8 @@ int word_length = 0, in_word = 0, word_index = 0;
 char **words, *word;
 if (str == NULL || *str == '\0')
 return (NULL);
+if (str[0]== ' ' && str[1] == '\0')
+return (NULL);
 for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ')
