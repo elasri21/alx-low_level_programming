@@ -16,7 +16,7 @@ char **words, *word;
 if (str == NULL || *str == '\0')
 return (NULL);
 if (sl == 1 && str[0] == ' ')
-return (NULL);
+str[0] = '\0';
 for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ')
