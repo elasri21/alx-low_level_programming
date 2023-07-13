@@ -17,10 +17,10 @@ if (n >= len)
 n = len;
 if (len == 0)
 n = 0;
-if (s1 == NULL)
-s1 = "";
 if (s2 == NULL)
-s2 = "";
+return (s1);
+if (s1 == NULL)
+return (s2);
 s = malloc(sizeof(char) * n + sizeof(s1));
 if (s == NULL)
 return (NULL);
