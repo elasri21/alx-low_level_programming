@@ -15,6 +15,8 @@ char *s;
 unsigned int len = strlen(s2);
 if (n >= len)
 n = len;
+if (len == 0)
+n = 0;
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
