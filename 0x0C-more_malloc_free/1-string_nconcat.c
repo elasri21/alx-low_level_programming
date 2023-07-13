@@ -21,7 +21,7 @@ if (s2 == NULL)
 s2 = "";
 if (s1 == NULL)
 s1 = "";
-s = malloc(sizeof(char) * n + sizeof(s1));
+s = malloc(sizeof(char) * n + sizeof(s1) + 1);
 if (s == NULL)
 return (NULL);
 strcpy(s, s1);
