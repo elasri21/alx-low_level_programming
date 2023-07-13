@@ -15,8 +15,10 @@ char *s;
 unsigned int len = strlen(s2);
 if (n > len)
 n = len;
-if (s1 == NULL && s2 == NULL)
-return (NULL);
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
 s = malloc(sizeof(char) * n + sizeof(s1));
 if (s == NULL)
 return (NULL);
