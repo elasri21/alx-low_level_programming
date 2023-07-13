@@ -18,9 +18,9 @@ n = len;
 if (len == 0)
 n = 0;
 if (s2 == NULL)
-return (s1);
+s2 = "";
 if (s1 == NULL)
-return (s2);
+s1 = "";
 s = malloc(sizeof(char) * n + sizeof(s1));
 if (s == NULL)
 return (NULL);
