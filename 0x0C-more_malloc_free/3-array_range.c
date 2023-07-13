@@ -16,9 +16,9 @@ return (NULL);
 arr = (int *)malloc(sizeof(int) * (max - min) + 1);
 if (arr == NULL)
 return (NULL);
-for (i = min;i <= max; i++)
+for (i = min; i <= max; i++)
 {
-*(arr +j) = i;
+*(arr + j) = i;
 j++;
 }
 return (arr);
