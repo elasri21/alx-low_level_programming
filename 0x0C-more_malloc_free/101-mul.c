@@ -2,13 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <ctype.h>
 /**
  *checkDigit - check for digits in a string
  * @s: string to check
  * Return: true if so. false otherwise
  */
-bool checkDigit(char *s)
+int checkDigit(char *s)
 {
 int i = 0;
 while (s[i] != '\0')
@@ -16,10 +16,10 @@ while (s[i] != '\0')
 if (isdigit(s[i]))
 continue;
 else
-return (false);
+return (0);
 i++;
 }
-return (true);
+return (1);
 }
 
 /**
@@ -36,7 +36,7 @@ if (argc != 3)
 printf("Error\n");
 exit(98);
 }
-if (!checkDigit(arrgc[1]) || !checkDigit(argv[2]))
+if (checkDigit(argv[1]) == 0 || checkDigit(argv[2]) == 0)
 {
 printf("Error\n");
 exit(98);
@@ -47,8 +47,7 @@ if (mul == NULL)
 printf("Error\n");
 exit(98);
 }
-mul = argv[1] * argv[2];
+*mul = atoi(argv[1]) * atoi(argv[2]);
 printf("%d\n", *mul);
-free(mul);
 return (0);
 }
