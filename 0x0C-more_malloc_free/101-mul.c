@@ -40,7 +40,7 @@ if (checkDigit(argv[1]) == 0 || checkDigit(argv[2]) == 0)
 printf("Error\n");
 exit(98);
 }
-mul = (int *)malloc(sizeof(int));
+mul = malloc(sizeof(int));
 if (mul == NULL)
 {
 printf("Error\n");
