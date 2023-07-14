@@ -14,10 +14,9 @@ int i = 0;
 while (s[i] != '\0')
 {
 if (isdigit(s[i]))
-continue;
+i++;
 else
 return (0);
-i++;
 }
 return (1);
 }
@@ -49,5 +48,6 @@ exit(98);
 }
 *mul = atoi(argv[1]) * atoi(argv[2]);
 printf("%d\n", *mul);
+free(mul);
 return (0);
 }
