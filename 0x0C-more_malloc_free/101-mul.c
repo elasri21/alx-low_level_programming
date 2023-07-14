@@ -29,7 +29,7 @@ return (1);
  */
 int main(int argc, char **argv)
 {
-int n1, n2;
+int n1, n2, *mul;
 if (argc != 3)
 {
 printf("Error\n");
@@ -40,8 +40,16 @@ if (checkDigit(argv[1]) == 0 || checkDigit(argv[2]) == 0)
 printf("Error\n");
 exit(98);
 }
+mul = (int *)malloc(sizeof(int));
+if (mul == NULL)
+{
+printf("Error\n");
+exit(98);
+}
 n1 = atoi(argv[1]);
 n2 = atoi(argv[2]);
-printf("%d\n", n1 * n2);
+*mul = n1 *n2;
+printf("%d\n", *mul);
+free(mul);
 return (0);
 }
