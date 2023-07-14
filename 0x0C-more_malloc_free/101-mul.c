@@ -30,6 +30,7 @@ return (1);
 int main(int argc, char **argv)
 {
 long int n1, n2, *mul;
+char *ar1, *ar2;
 if (argc != 3)
 {
 printf("Error\n");
@@ -46,8 +47,8 @@ if (mul == NULL)
 printf("Error\n");
 exit(98);
 }
-n1 = atoi(argv[1]);
-n2 = atoi(argv[2]);
+n1 = strtol(argv[1], &ar1, 10);
+n2 = strtol(argv[2], &ar2, 10);
 *mul = n1 *n2;
 printf("%ld\n", *mul);
 free(mul);
