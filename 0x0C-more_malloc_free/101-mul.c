@@ -4,53 +4,58 @@
 #include <string.h>
 #include <ctype.h>
 /**
- *checkDigit - check for digits in a string
- * @s: string to check
- * Return: true if so. false otherwise
+ *checkdigit - check for digits in a string
+ * @str: string to check
+ * Return: 1 if so. 0 otherwise
  */
-int checkDigit(char *s)
+int checkdigit(char *str)
 {
-int i = 0;
-while (s[i] != '\0')
-{
-if (isdigit(s[i]))
-i++;
-else
+int i;
+for (i = 0; str[i]; i++)
+if (!isdigit(str[i]))
 return (0);
-}
 return (1);
 }
-
 /**
- * main - main function
- * @argc: number of argumentd
- * @argv: array of arguments
- * Return: 0 always
+ * main - multiplies two positive numbers
+ * @argc: the number of arguments
+ * @argv: the arguments
+ *
+ * Return: 0 on success, 98 on failure
  */
 int main(int argc, char **argv)
 {
-long int n1, n2, *mul;
-char *ar1, *ar2;
-if (argc != 3)
+int len1, len2, i, j, carry, n1, n2, sum;
+int *result;
+if (argc != 3 || !checkdigit(argv[1]) || !checkdigit(argv[2]))
 {
 printf("Error\n");
-exit(98);
+return (98);
 }
-if (checkDigit(argv[1]) == 0 || checkDigit(argv[2]) == 0)
+len1 = strlen(argv[1]);
+len2 = strlen(argv[2]);
+result = calloc(len1 + len2, sizeof(int));
+if (!result)
+exit(98);
+for (i = len1 - 1; i >= 0; i--)
 {
-printf("Error\n");
-exit(98);
-}
-mul = malloc(sizeof(long int));
-if (mul == NULL)
+carry = 0;
+n1 = argv[1][i] - '0';
+for (j = len2 - 1; j >= 0; j--)
 {
-printf("Error\n");
-exit(98);
+n2 = argv[2][j] - '0';
+sum = n1 *n2 + result[i + j + 1] + carry;
+result[i + j + 1] = sum % 10;
+carry = sum / 10;
 }
-n1 = strtol(argv[1], &ar1, 10);
-n2 = strtol(argv[2], &ar2, 10);
-*mul = n1 *n2;
-printf("%ld\n", *mul);
-free(mul);
+result[i + j + 1] = carry;
+}
+i = 0;
+while (result[i] == 0 && i < len1 + len2 - 1)
+i++;
+while (i < len1 + len2)
+printf("%d", result[i++]);
+printf("\n");
+free(result);
 return (0);
 }
