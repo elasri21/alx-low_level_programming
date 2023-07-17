@@ -32,13 +32,6 @@ free(new_dog);
 free(name_c);
 return (NULL);
 }
-if (!age)
-{
-free(new_dog);
-free(name_c);
-free(owner_c);
-return (NULL);
-}
 new_dog->name = name_c;
 new_dog->age = age;
 new_dog->owner = owner_c;
