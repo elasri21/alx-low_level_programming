@@ -1,5 +1,11 @@
 #ifndef MYHEADER_H
 #define MYHEADER_H
+/**
+ * struct dog - data type
+ * @name: the name
+ * @age: the age
+ * @owner: the owner
+ */
 struct dog
 {
 char *name;
