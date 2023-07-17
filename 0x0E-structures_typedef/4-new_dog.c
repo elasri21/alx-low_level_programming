@@ -32,7 +32,7 @@ free(new_dog);
 free(name_c);
 return (NULL);
 }
-if (age < 0)
+if (!age)
 {
 free(new_dog);
 free(name_c);
