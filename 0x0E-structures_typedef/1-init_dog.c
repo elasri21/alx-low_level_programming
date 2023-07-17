@@ -17,4 +17,6 @@ d->name = name;
 d->age = age;
 d->owner = owner;
 }
+else
+return;
 }
