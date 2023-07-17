@@ -22,14 +22,11 @@ return (NULL);
 name_c = strdup(name);
 if (name_c == NULL)
 {
-free(new_dog);
 return (NULL);
 }
 owner_c = strdup(owner);
 if (owner_c == NULL)
 {
-free(new_dog);
-free(name_c);
 return (NULL);
 }
 new_dog->name = name_c;
