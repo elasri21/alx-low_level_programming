@@ -1,7 +1,11 @@
 #include "dog.h"
 #include <stdio.h>
 
-
+/**
+ * print_dog - print dog info
+ * @d: structure
+ * Return: Nothing
+ */
 void print_dog(struct dog *d)
 {
 if (d == NULL)
@@ -11,7 +15,7 @@ printf("Name: %s\n", d->name);
 else
 printf("Name: (nil)\n");
 if (d->age > 0)
-printf("Age: %.1f\n", d->age);
+printf("Age: %f\n", d->age);
 else
 printf("Age: (nil)\n");
 if (d->owner != NULL)
