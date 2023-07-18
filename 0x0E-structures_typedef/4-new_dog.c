@@ -22,12 +22,15 @@ return (NULL);
 name_c = malloc(strlen(name));
 if (name_c == NULL)
 {
+free(new_dog);
 return (NULL);
 }
 name_c = strdup(name);
 owner_c = malloc(strlen(owner));
 if (owner_c == NULL)
 {
+free(name_c);
+free(new_dog);
 return (NULL);
 }
 owner_c = strdup(owner);
