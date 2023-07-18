@@ -19,16 +19,18 @@ char *owner_c;
 new_dog = malloc(sizeof(dog_t));
 if (new_dog == NULL)
 return (NULL);
-name_c = strdup(name);
+name_c = malloc(strlen(name));
 if (name_c == NULL)
 {
 return (NULL);
 }
-owner_c = strdup(owner);
+name_c = strdup(name);
+owner_c = malloc(strlen(owner));
 if (owner_c == NULL)
 {
 return (NULL);
 }
+owner_c = strdup(owner);
 new_dog->name = name_c;
 new_dog->age = age;
 new_dog->owner = owner_c;
