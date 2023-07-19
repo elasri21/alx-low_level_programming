@@ -6,9 +6,11 @@
  * print_name - prints a name
  * @name: the name to be printed
  * @f: function
- * @s: the name
+ * @s: Pointer to a string
+ * Return: Nothing
  */
 void print_name(char *name, void (*f)(char *s))
 {
+if (name != NULL)
 f(name);
 }
