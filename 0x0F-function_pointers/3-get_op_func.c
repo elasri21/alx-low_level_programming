@@ -4,7 +4,7 @@
 #include <string.h>
 /**
  * get_op_func - get operation
- * @s: operation 
+ * @s: operation
  * Return: integer
  */
 int (*get_op_func(char *s))(int, int)
