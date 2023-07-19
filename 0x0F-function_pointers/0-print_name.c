@@ -9,7 +9,7 @@
  * @s: Pointer to a string
  * Return: Nothing
  */
-void print_name(char *name, void (*f)(char *s))
+void print_name(char *name, void (*f)(char *))
 {
 if (name == NULL)
 return;
