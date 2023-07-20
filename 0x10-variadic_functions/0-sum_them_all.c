@@ -3,12 +3,13 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- *
- *
+ * sum_them_all - sum all args
+ * @n: number of args
+ * Return: Integer
  */
 int sum_them_all(const unsigned int n, ...)
 {
-unsigned int i; 
+unsigned int i;
 int sum;
 va_list args;
 va_start(args, n);
