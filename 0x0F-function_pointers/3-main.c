@@ -26,7 +26,7 @@ if (f == NULL)
 printf("Error\n");
 exit(99);
 }
-if (n2 == 0 && (strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0))
+if (n2 == 0 && f != NULL)
 {
 printf("Error\n");
 exit(100);
