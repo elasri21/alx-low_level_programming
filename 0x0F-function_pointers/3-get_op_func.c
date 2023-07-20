@@ -18,14 +18,9 @@ op_t ops[] = {
 {NULL, NULL}
 };
 int i;
-if (s == NULL)
-return (NULL);
 i = 0;
-while (ops[i].op != NULL)
+while (ops[i].op != NULL && *(ops[i].op) != *s)
 {
-if (strcmp(s, ops[i].op) == 0)
-break;
-else
 i++;
 }
 
