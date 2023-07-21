@@ -9,10 +9,10 @@ void helper(int nb)
 {
 int i;
 unsigned char *ptr = (unsigned char *)helper;
-for (i = 0; i < nb; i++)
+for (i = 1; i <= nb; i++)
 {
 printf("%02x", *(ptr + i));
-if (i < nb - 1)
+if (i < nb)
 printf(" ");
 }
 printf("\n");
@@ -32,7 +32,7 @@ exit(1);
 }
 int nb;
 nb = atoi(argv[1]);
-if (nb < 0)
+if (nb <= 0)
 {
 printf("Error\n");
 exit(2);
