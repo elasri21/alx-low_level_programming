@@ -12,29 +12,45 @@ void print_all(const char * const format, ...)
 int i = 0;
 va_list args;
 va_start(args, format);
-while (*(format + i) != '\0')
+while (format[i])
 {
-if (*format == 'i')
+switch (format[i])
 {
-int arg = va_arg(args, int);
-printf("%d ", arg);
+case 'i':
+{
+int x = va_arg(args, int);
+printf("%d", x);
+break;
 }
-else if (*format == 'f')
+case 'c':
 {
-double arg = va_arg(args, double);
-printf("%f ", arg);
+int x = va_arg(args, int);
+printf("%c", x);
+break;
 }
-else if (*format == 'c')
+case 'f':
 {
-int arg = va_arg(args, int);
-printf("%c ", arg);
+double x = va_arg(args, double);
+printf("%f", x);
+break;
 }
-else if (*format == 's')
+case 's':
 {
-char *arg = va_arg(args, char *);
-printf("%s ", arg);
+char *x = va_arg(args, char *);
+if (x == NULL)
+printf("(nil)");
+printf("%s", x);
+break;
+}
+default:
+i++;
+continue;
 }
 i++;
+if (format[i])
+{
+printf(", ");
+}
 }
 va_end(args);
 printf("\n");
