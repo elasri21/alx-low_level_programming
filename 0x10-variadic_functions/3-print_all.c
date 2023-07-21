@@ -51,9 +51,7 @@ continue;
 }
 i++;
 if (format[i])
-{
 printf(", ");
-}
 }
 va_end(args);
 printf("\n");
