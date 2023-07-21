@@ -38,7 +38,10 @@ case 's':
 {
 char *x = va_arg(args, char *);
 if (x == NULL)
+{
 printf("(nil)");
+break;
+}
 printf("%s", x);
 break;
 }
