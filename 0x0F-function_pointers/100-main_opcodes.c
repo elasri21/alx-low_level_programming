@@ -25,14 +25,14 @@ printf("\n");
  */
 int main(int argc, char *argv[])
 {
-int nb;
 if (argc != 2)
 {
 printf("Error\n");
 exit(1);
 }
+int nb;
 nb = atoi(argv[1]);
-if (nb <= 0)
+if (nb < 0)
 {
 printf("Error\n");
 exit(2);
