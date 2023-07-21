@@ -18,20 +18,17 @@ switch (format[i])
 {
 case 'i':
 {
-int x = va_arg(args, int);
-printf("%d", x);
+printf("%d", va_arg(args, int));
 break;
 }
 case 'c':
 {
-int x = va_arg(args, int);
-printf("%c", x);
+printf("%c", va_arg(args, int));
 break;
 }
 case 'f':
 {
-double x = va_arg(args, double);
-printf("%f", x);
+printf("%f", va_arg(args, double));
 break;
 }
 case 's':
