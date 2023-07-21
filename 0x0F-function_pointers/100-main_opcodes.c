@@ -11,7 +11,9 @@ int i;
 unsigned char *ptr = (unsigned char *)helper;
 for (i = 0; i < nb; i++)
 {
-printf("%02x ", *(ptr + i));
+printf("%02x", *(ptr + i));
+if (i < nb - 1)
+printf(" ");
 }
 printf("\n");
 }
@@ -30,7 +32,7 @@ printf("Error\n");
 exit(1);
 }
 nb = atoi(argv[1]);
-if (nb <= 0 || nb > 32)
+if (nb <= 0)
 {
 printf("Error\n");
 exit(2);
