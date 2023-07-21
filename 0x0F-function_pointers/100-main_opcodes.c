@@ -30,7 +30,7 @@ printf("Error\n");
 exit(1);
 }
 nb = atoi(argv[1]);
-if (nb <= 0)
+if (nb <= 0 || nb > 32)
 {
 printf("Error\n");
 exit(2);
