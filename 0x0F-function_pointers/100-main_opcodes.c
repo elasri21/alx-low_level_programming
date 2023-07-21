@@ -12,7 +12,9 @@ unsigned char *ptr = (unsigned char *)helper;
 for (i = 1; i <= nb; i++)
 {
 printf("%02x", *(ptr + i));
-if (i < nb)
+if (i < nb && i % 32 == 0)
+printf("\n");
+if (i < nb && i % 32 != 0)
 printf(" ");
 }
 printf("\n");
