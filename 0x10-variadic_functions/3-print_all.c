@@ -3,34 +3,27 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * print_all - Prints anything
- * @format: format
+ * helper - helper func
+ * @format: string
+ * @args: arguments list
  * Return: Nothing
  */
-void print_all(const char * const format, ...)
+void helper(const char *const format, va_list args)
 {
 int i = 0;
-va_list args;
-va_start(args, format);
 while (format != NULL && format[i])
 {
 switch (format[i])
 {
 case 'i':
-{
 printf("%d", va_arg(args, int));
 break;
-}
 case 'c':
-{
 printf("%c", va_arg(args, int));
 break;
-}
 case 'f':
-{
 printf("%f", va_arg(args, double));
 break;
-}
 case 's':
 {
 char *x = va_arg(args, char *);
@@ -50,6 +43,17 @@ i++;
 if (format[i])
 printf(", ");
 }
+}
+/**
+ * print_all - Prints anything
+ * @format: format
+ * Return: Nothing
+ */
+void print_all(const char *const format, ...)
+{
+va_list args;
+va_start(args, format);
+helper(format, args);
 va_end(args);
 printf("\n");
 }
