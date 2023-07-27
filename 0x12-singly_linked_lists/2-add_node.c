@@ -19,7 +19,7 @@ return (newNode);
 }
 /**
  * add_node - creates a new node
- * head: pointer
+ * @head: pointer
  * @str: string
  * Return: A pointer
  */
