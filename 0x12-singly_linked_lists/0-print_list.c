@@ -21,8 +21,7 @@ i++;
 }
 else
 {
-printf("%s\n", tmp->str);
-printf("%u\n", tmp->len);
+printf("[%u] %s\n", tmp->len, tmp->str);
 i++;
 }
 tmp = tmp->next;
