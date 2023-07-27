@@ -10,21 +10,22 @@
 size_t print_list(const list_t *h)
 {
 unsigned int i = 0;
-const list_t *tmp;
-tmp = h;
-while (tmp->next != NULL)
+const list_t *tmp, *new;
+tmp = new = h;
+while (new != NULL)
 {
-if (tmp->str == NULL)
+if (new->str == NULL)
 {
 printf("[0] (nil)\n");
 i++;
 }
 else
 {
-printf("[%u] %s\n", tmp->len, tmp->str);
+printf("[%u] %s\n", new->len, new->str);
 i++;
 }
 tmp = tmp->next;
+new = tmp;
 }
 return (i);
 }
