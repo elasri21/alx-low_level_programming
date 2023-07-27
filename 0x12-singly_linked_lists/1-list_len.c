@@ -9,7 +9,7 @@
  */
 size_t list_len(const list_t *h)
 {
-unsigned int i;
+unsigned int i = 0;
 const list_t *tmp, *new;
 tmp = new = h;
 while (new != NULL)
