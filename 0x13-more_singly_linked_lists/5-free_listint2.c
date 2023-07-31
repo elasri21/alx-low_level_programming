@@ -16,5 +16,6 @@ tmp = curr;
 curr = curr->next;
 free(tmp);
 }
+curr = NULL;
 *head = NULL;
 }
