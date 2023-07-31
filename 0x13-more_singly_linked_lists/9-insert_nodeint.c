@@ -13,7 +13,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 unsigned int i = 1, count = 0;
 listint_t *newNode, *tmp = *head;
-while (tmp != NULL)
+while (tmp->next != NULL)
 {
 count++;
 tmp = tmp->next;
