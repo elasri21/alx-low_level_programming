@@ -19,8 +19,9 @@ if (*head == NULL)
 {
 newNode->next = NULL;
 *head = newNode;
-return (newNode);
 }
+else
+{
 while (tmp != NULL)
 {
 count++;
@@ -41,6 +42,7 @@ return (NULL);
 newNode->n = n;
 newNode->next = tmp->next;
 tmp->next = newNode;
+}
 }
 return (newNode);
 }
