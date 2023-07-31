@@ -9,13 +9,18 @@
  */
 void free_listint2(listint_t **head)
 {
-listint_t *curr = *head, *tmp;
+listint_t *curr = *head;
+if (head == NULL || *head == NULL)
+{
+printf("(nil)");
+exit(1);
+}
 while (curr != NULL)
 {
+listint_t *tmp;
 tmp = curr;
 curr = curr->next;
 free(tmp);
 }
-curr = NULL;
 *head = NULL;
 }
