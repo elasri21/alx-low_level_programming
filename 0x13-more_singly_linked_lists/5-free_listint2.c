@@ -13,7 +13,7 @@ listint_t *curr = *head;
 if (*head == NULL || head == NULL)
 {
 printf("(nil)\n");
-return;
+exit(1);
 }
 while (curr != NULL)
 {
@@ -21,5 +21,6 @@ listint_t *tmp = curr;
 curr = curr->next;
 free(tmp);
 }
-*head = NULL;
+
+*head = curr = NULL;
 }
