@@ -20,6 +20,6 @@ listint_t *tmp = curr;
 curr = curr->next;
 free(tmp);
 }
-
-*head = curr = NULL;
+*head = NULL;
+head = NULL;
 }
