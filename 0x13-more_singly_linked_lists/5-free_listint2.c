@@ -20,5 +20,4 @@ curr = curr->next;
 free(tmp);
 }
 *head = NULL;
-head = NULL;
 }
