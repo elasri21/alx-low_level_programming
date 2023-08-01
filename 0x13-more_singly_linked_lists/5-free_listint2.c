@@ -9,12 +9,12 @@
  */
 void free_listint2(listint_t **head)
 {
-listint_t *curr = *head;
-listint_t *tmp = NULL;
+listint_t *curr, *tmp;
 if (head == NULL)
 return;
+curr = *head;
 (*head) = NULL;
-while (curr != NULL)
+while (curr)
 {
 tmp = curr;
 curr = tmp->next;
