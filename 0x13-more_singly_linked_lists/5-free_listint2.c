@@ -23,5 +23,9 @@ free(tmp);
 head = NULL;
 }
 else
+{
+*head = NULL;
+head = NULL;
 return;
+}
 }
