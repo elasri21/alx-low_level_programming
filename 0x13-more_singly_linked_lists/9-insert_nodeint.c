@@ -23,7 +23,7 @@ newNode->next = NULL;
 else
 {
 tmp = *head;
-while (tmp != NULL)
+while (tmp->next != NULL)
 {
 count++;
 tmp = tmp->next;
