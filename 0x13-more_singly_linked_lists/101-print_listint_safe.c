@@ -15,10 +15,9 @@ for (tmp = head; tmp != NULL; tmp = tmp->next)
 {
 printf("[%p] %d\n", (void *)tmp, tmp->n);
 count++;
-if (tmp <= tmp->next)
+if (tmp < tmp->next)
 {
 printf("-> [%p] %d\n", (void *)tmp->next, tmp->next->n);
-fprintf(stderr, "Error: loop detected in the list\n");
 exit(98);
 }
 }
