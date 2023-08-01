@@ -13,11 +13,15 @@ listint_t *curr = *head;
 listint_t *tmp = NULL;
 if (head == NULL || *head == NULL)
 return;
+else
+{
 *head = NULL;
+head = NULL;
 while (curr != NULL)
 {
 tmp = curr->next;
 free(curr);
 curr = tmp;
+}
 }
 }
