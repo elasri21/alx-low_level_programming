@@ -37,9 +37,6 @@ while (i < idx)
 tmp = tmp->next;
 i++;
 }
-if (newNode == NULL)
-return (NULL);
-newNode->n = n;
 newNode->next = tmp->next;
 tmp->next = newNode;
 }
