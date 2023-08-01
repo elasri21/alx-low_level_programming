@@ -27,6 +27,8 @@ while (tmp != NULL && i < index - 1)
 tmp = tmp->next;
 i++;
 }
+if (tmp == NULL)
+return (-1);
 nextNode = tmp->next;
 tmp->next = nextNode->next;
 free(nextNode);
