@@ -15,9 +15,9 @@ return;
 while (curr != NULL)
 {
 listint_t *tmp;
-tmp = curr;
-curr = curr->next;
-free(tmp);
+tmp = curr->next;
+free(curr);
+curr = tmp;
 }
 *head = NULL;
 }
