@@ -27,8 +27,6 @@ s[i] = '\0';
 len = strlen(s);
 for (i = len - 1; i >= 0; i--)
 {
-printf("%c", s[i]);
-if (i == 0)
-printf("\n");
+_putchar(s[i]);
 }
 }
