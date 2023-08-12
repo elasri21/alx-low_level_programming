@@ -10,23 +10,24 @@
 
 void print_binary(unsigned long int n)
 {
-char s[100];
-int i = 0, len;
-while (1)
-{
-if (n % 2 == 1)
-s[i] = '1';
-else
-s[i] = '0';
-n = n / 2;
-i++;
+unsigned long int tmp = 1UL << (sizeof(unsigned long int) * 8 - 1);
+int zeros = 1;
 if (n == 0)
-break;
-}
-s[i] = '\0';
-len = strlen(s);
-for (i = len - 1; i >= 0; i--)
 {
-_putchar(s[i]);
+_putchar('0');
+return;
+}
+while (tmp > 0)
+{
+if (n & tmp)
+{
+zeros = 0;
+_putchar('1');
+}
+else if (!zeros)
+{
+_putchar('0');
+}
+tmp >>= 1;
 }
 }
