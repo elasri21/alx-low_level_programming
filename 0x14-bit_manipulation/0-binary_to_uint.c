@@ -26,11 +26,9 @@ unsigned int binary_to_uint(const char *b)
 {
 unsigned int d = 0;
 int i, j = 0, len = strlen(b);
-if (!b)
+if (b == NULL)
 return (0);
-else
-{
-for (i = len - 1; i >= 0; i--)
+for (i = (len - 1); i >= 0; i--)
 {
 if (b[i] == '1')
 {
@@ -43,5 +41,4 @@ else
 return (0);
 }
 return (d);
-}
 }
