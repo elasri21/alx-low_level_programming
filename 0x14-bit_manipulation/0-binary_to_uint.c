@@ -36,7 +36,10 @@ d += power(j);
 j++;
 }
 else if (b[i] == '0')
+{
 j++;
+continue;
+}
 else
 return (0);
 }
