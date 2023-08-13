@@ -12,7 +12,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 FILE *myFile = NULL;
 char *buf = NULL;
-ssize_t btRd, btWt;
+size_t btRd;
+ssize_t btWt;
 if (filename == NULL)
 return (0);
 myFile = fopen("Requiescat", "r");
@@ -33,7 +34,7 @@ return (0);
 }
 buf[btRd] = '\0';
 btWt = write(STDOUT_FILENO, buf, btRd);
-if (btWt < 0 || btWt != btRd)
+if (btWt < 0 || (size_t)btWt != btRd)
 {
 free(buf);
 fclose(myFile);
