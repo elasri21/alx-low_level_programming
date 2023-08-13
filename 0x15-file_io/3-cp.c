@@ -11,7 +11,7 @@ char *createBuf(char *buff)
 char *b = malloc(sizeof(char) * 1024);
 if (b == NULL)
 {
-dprintf(STDERR_FILENO, "Error: can't write to %s\n", buff);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", buff);
 exit(99);
 }
 return (b);
@@ -26,7 +26,7 @@ void cf(int f)
 int c_file = close(f);
 if (c_file == -1)
 {
-dprintf(STDERR_FILENO, "Error: can't close f %d\n", f);
+dprintf(STDERR_FILENO, "Error: Can't close f %d\n", f);
 exit(100);
 }
 }
@@ -52,14 +52,14 @@ file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 do {
 if (file_from == -1 || reading == -1)
 {
-dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[2]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
 free(b);
 exit(98);
 }
 writing = write(file_to, b, reading);
 if (file_to == -1 || writing == -1)
 {
-dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 free(b);
 exit(99);
 }
