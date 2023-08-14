@@ -19,7 +19,7 @@ while (i < 4)
 if (e[i] != 127 && e[i] != 'E' &&
 e[i] != 'L' && e[i] != 'F')
 {
-dprintf(STDERR_FILENO, "Error: this is not an ELF file\n");
+dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 exit(98);
 }
 i++;
@@ -34,10 +34,10 @@ i++;
 void magic(unsigned char *e)
 {
 int i = 0;
-printf("magic: ");
+printf("Magic: ");
 while (i < EI_NIDENT)
 {
-printf("%2x", e[i]);
+printf("%02x", e[i]);
 if (i == EI_NIDENT - 1)
 printf("\n");
 else
@@ -53,11 +53,11 @@ i++;
  */
 void class(unsigned char *e)
 {
-printf("class: ");
+printf("Class: ");
 switch (e[EI_CLASS])
 {
 case ELFCLASSNONE:
-printf("None\n");
+printf("none\n");
 break;
 case ELFCLASS32:
 printf("ELF32\n");
@@ -77,17 +77,17 @@ printf("<unknown: %x>\n", e[EI_CLASS]);
  */
 void data(unsigned char *e)
 {
-printf("data: ");
+printf("Data: ");
 switch (e[EI_DATA])
 {
 case ELFDATANONE:
 printf("none\n");
 break;
 case ELFDATA2LSB:
-printf("little endian\n");
+printf("2's complement, little endian\n");
 break;
 case ELFDATA2MSB:
-printf("big endian\n");
+printf("2's complement, big endian\n");
 break;
 default:
 printf("<unknown: %x>\n", e[EI_DATA]);
@@ -101,11 +101,11 @@ printf("<unknown: %x>\n", e[EI_DATA]);
  */
 void ver(unsigned char *e)
 {
-printf("version: %d", e[EI_VERSION]);
+printf("Version: %d", e[EI_VERSION]);
 switch (e[EI_VERSION])
 {
 case EV_CURRENT:
-printf("current version\n");
+printf("current\n");
 break;
 default:
 printf("\n");
@@ -185,10 +185,10 @@ case ET_NONE:
 printf("NONE (None)\n");
 break;
 case ET_REL:
-printf("REL (Relocatable fiel)\n");
+printf("REL (Relocatable file)\n");
 break;
 case ET_EXEC:
-printf("EXEC (Executable)\n");
+printf("EXEC (Executable file)\n");
 break;
 case ET_CORE:
 printf("CORE (Core file)\n");
