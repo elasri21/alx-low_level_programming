@@ -90,7 +90,7 @@ case ELFDATA2MSB:
 printf("2's complement, big endian\n");
 break;
 default:
-printf("<unknown: %x>\n", e[EI_DATA]);
+printf("<unknown: %x>\n", e[EI_CLASS]);
 }
 }
 
@@ -274,7 +274,7 @@ data(h->e_ident);
 ver(h->e_ident);
 abi(h->e_ident);
 sabi(h->e_ident);
-type(h->e_entry, h->e_ident);
+type(h->e_type, h->e_ident);
 en(h->e_entry, h->e_ident);
 free(h);
 cl(op);
