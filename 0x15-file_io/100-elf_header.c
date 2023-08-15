@@ -34,7 +34,7 @@ i++;
 void magic(unsigned char *e)
 {
 int i = 0;
-printf("  Magic: ");
+printf(" Magic: ");
 while (i < EI_NIDENT)
 {
 printf("%02x", e[i]);
@@ -53,7 +53,7 @@ i++;
  */
 void class(unsigned char *e)
 {
-printf("  Class: ");
+printf(" Class: ");
 switch (e[EI_CLASS])
 {
 case ELFCLASSNONE:
@@ -77,7 +77,7 @@ printf("<unknown: %x>\n", e[EI_CLASS]);
  */
 void data(unsigned char *e)
 {
-printf("  Data: ");
+printf(" Data: ");
 switch (e[EI_DATA])
 {
 case ELFDATANONE:
@@ -90,7 +90,7 @@ case ELFDATA2MSB:
 printf("2's complement, big endian\n");
 break;
 default:
-printf("<unknown: %x>\n", e[EI_CLASS]);
+printf("<unknown: %x>\n", e[EI_DATA]);
 }
 }
 
@@ -101,7 +101,7 @@ printf("<unknown: %x>\n", e[EI_CLASS]);
  */
 void ver(unsigned char *e)
 {
-printf("  Version: %d", e[EI_VERSION]);
+printf(" Version: %d", e[EI_VERSION]);
 switch (e[EI_VERSION])
 {
 case EV_CURRENT:
@@ -120,7 +120,7 @@ break;
  */
 void abi(unsigned char *e)
 {
-printf("  OS/ABI: ");
+printf(" OS/ABI: ");
 switch (e[EI_OSABI])
 {
 case ELFOSABI_NONE:
@@ -133,7 +133,7 @@ case ELFOSABI_NETBSD:
 printf("UNIX - NetBSD\n");
 break;
 case ELFOSABI_LINUX:
-printf("UNIX - Linus\n");
+printf("UNIX - Linux\n");
 break;
 case ELFOSABI_SOLARIS:
 printf("UNIX - Solaris\n");
@@ -165,7 +165,7 @@ printf("<unknown: %x>\n", e[EI_OSABI]);
  */
 void sabi(unsigned char *e)
 {
-printf("  ABI Version: %d\n", e[EI_ABIVERSION]);
+printf(" ABI Version: %d\n", e[EI_ABIVERSION]);
 }
 
 /**
@@ -178,7 +178,7 @@ void type(unsigned int t, unsigned char *e)
 {
 if (e[EI_DATA] == ELFDATA2MSB)
 t >>= 8;
-printf("  Type: ");
+printf(" Type: ");
 switch (t)
 {
 case ET_NONE:
@@ -209,7 +209,7 @@ printf("<unknown: %x>\n", t);
  */
 void en(unsigned long int ee, unsigned char *e)
 {
-printf("  Entry point address: ");
+printf(" Entry point address: ");
 if (e[EI_DATA] == ELFDATA2MSB)
 {
 ee = ((ee << 8) & 0xFF00FF00) | ((ee >> 8) & 0xFF00FF);
