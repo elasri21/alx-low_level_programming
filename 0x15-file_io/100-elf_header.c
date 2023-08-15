@@ -245,11 +245,6 @@ int main(int __attribute__((__unused__))argc, char *argv[])
 {
 Elf64_Ehdr *h;
 int op, rd;
-if (argc != 2)
-{
-dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n");
-exit(98);
-}
 op = open(argv[1], O_RDONLY);
 if (op == -1)
 {
