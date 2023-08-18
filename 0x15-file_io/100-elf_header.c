@@ -1,11 +1,20 @@
+#include <elf.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <elf.h>
+void elf(unsigned char *e);
+void magic(unsigned char *e);
+void class(unsigned char *e);
+void data(unsigned char *e);
+void ver(unsigned char *e);
+void abi(unsigned char *e);
+void sabi(unsigned char *e);
+void type(unsigned int t, unsigned char *e);
+void en(unsigned long int ee, unsigned char *e);
+void cl(int e);
 /**
  * elf - is a file ELF or not
  * @e: array
