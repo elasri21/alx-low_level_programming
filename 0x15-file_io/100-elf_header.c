@@ -95,9 +95,10 @@ printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 }
 
 /**
- *  * print_version - print version
- *   * @e_ident: pointer
- *    */
+ * print_version - print version
+ * @e_ident: pointer
+ * Return: nothing
+ */
 void print_version(unsigned char *e_ident)
 {
 printf(" Version: %d",
