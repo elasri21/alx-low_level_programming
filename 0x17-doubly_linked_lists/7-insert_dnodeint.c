@@ -27,9 +27,9 @@ while (tmp != NULL)
 len++;
 tmp = tmp->next;
 }
-if (idx > len)
+if (idx >= len)
 return (NULL);
-if (idx == len)
+if (idx == len - 1)
 add_dnodeint_end(h, n);
 tmp = *h;
 while (i < idx - 1)
