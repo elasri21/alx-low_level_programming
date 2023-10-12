@@ -13,7 +13,7 @@ const dlistint_t *tmp = h;
 size_t length = 0;
 if (h == NULL)
 return (0);
-while(tmp != NULL)
+while (tmp != NULL)
 {
 length++;
 printf("%d\n", tmp->n);
