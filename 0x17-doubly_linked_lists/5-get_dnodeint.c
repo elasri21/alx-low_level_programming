@@ -15,15 +15,13 @@ dlistint_t *node, *tmp;
 size_t length = 0;
 if (head == NULL)
 return (NULL);
-if (index == 1)
-return (head);
 tmp = head;
 while (tmp != NULL)
 {
 length++;
 tmp = tmp->next;
 }
-if (index <= 0 || index > length)
+if (index > length)
 return (NULL);
 tmp = head;
 while (i < index)
