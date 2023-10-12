@@ -3,12 +3,12 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * add_dnodeint - adds a node to the list
+ * add_dnodeint_end - adds a node to the list
  * @head: list head
  * @n: list data
  * Return: new node
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 dlistint_t *tmp, *new;
 new = (dlistint_t *)malloc(sizeof(dlistint_t));
@@ -22,9 +22,10 @@ if (*head == NULL)
 else
 {
 tmp = *head;
-new->next = tmp;
-tmp->prev = new;
-*head = new;
+while (tmp->next != NULL)
+tmp = tmp->next;
+new->prev = tmp;
+tmp->next = new;
 }
 return (new);
 }
