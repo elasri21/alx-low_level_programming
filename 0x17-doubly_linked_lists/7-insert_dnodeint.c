@@ -19,7 +19,7 @@ return (NULL);
 new->n = n;
 new->prev = NULL;
 new->next = NULL;
-if (*h == NULL)
+if (*h == NULL || idx == 0)
 add_dnodeint(h, n);
 tmp = *h;
 while (tmp != NULL)
@@ -27,9 +27,9 @@ while (tmp != NULL)
 len++;
 tmp = tmp->next;
 }
-if (idx >= len)
+if (idx > len)
 return (NULL);
-if (idx == len - 1)
+if (idx == len)
 add_dnodeint_end(h, n);
 tmp = *h;
 while (i < idx - 1)
