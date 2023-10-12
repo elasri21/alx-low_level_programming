@@ -22,7 +22,7 @@ new->next = NULL;
 if (*h == NULL)
 {
 *h = new;
-return (new);
+return (*h);
 }
 tmp = *h;
 while (tmp != NULL)
@@ -30,7 +30,7 @@ while (tmp != NULL)
 len++;
 tmp = tmp->next;
 }
-if (idx >= len)
+if (idx > len)
 return (NULL);
 tmp = *h;
 while (i < idx - 1)
