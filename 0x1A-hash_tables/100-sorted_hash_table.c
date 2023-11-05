@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "hash_tables.h"
+#include "helper_func.c"
+#include "helper_func2.c"
 
 shash_node_t *create_pairs(const char *k, const char *v);
 shash_node_t *no_collision_pair(shash_table_t *htable, const char *k,
