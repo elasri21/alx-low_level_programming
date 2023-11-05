@@ -99,10 +99,11 @@ return (NULL);
 
 void shash_table_print(const shash_table_t *ht)
 {
-shash_node_t *tmp = ht->shead;
+shash_node_t *tmp;
 unsigned long int ct = 0;
 if (ht == NULL)
 return;
+tmp = ht->stail;
 printf("{");
 while (tmp != NULL)
 {
@@ -123,10 +124,11 @@ printf("}\n");
 
 void shash_table_print_rev(const shash_table_t *ht)
 {
-shash_node_t *tmp = ht->stail;
+shash_node_t *tmp;
 unsigned long int ct = 0;
 if (ht == NULL)
 return;
+tmp = ht->stail;
 printf("{");
 while (tmp != NULL)
 {
