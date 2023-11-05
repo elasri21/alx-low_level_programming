@@ -102,10 +102,7 @@ void shash_table_print(const shash_table_t *ht)
 shash_node_t *tmp = ht->shead;
 unsigned long int ct = 0;
 if (ht == NULL)
-{
-printf("\n")
 return;
-}
 printf("{");
 while (tmp != NULL)
 {
