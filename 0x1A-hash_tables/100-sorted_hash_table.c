@@ -103,7 +103,7 @@ shash_node_t *tmp;
 unsigned long int ct = 0;
 if (ht == NULL)
 return;
-tmp = ht->stail;
+tmp = ht->shead;
 printf("{");
 while (tmp != NULL)
 {
