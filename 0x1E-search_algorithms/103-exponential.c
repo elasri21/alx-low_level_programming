@@ -8,7 +8,7 @@
   * @value: needle(an integer)
   * Return: -1 on failure. index of value on success
   */
-int binary_search(int *array, size_t left, size_t right, int value)
+int binary_search(int *array, size_t l, size_t r, int value)
 {
 size_t i;
 if (array == NULL)
