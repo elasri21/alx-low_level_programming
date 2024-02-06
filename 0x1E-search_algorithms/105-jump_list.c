@@ -3,7 +3,7 @@
 #include "search_algos.h"
 /**
  * jump_list -  searches for a value in a sorted list of integers
- * @list: haystack(a list of integers) 
+ * @list: haystack(a list of integers)
  * @size: size of the list
  * @value: needle(an integer)
  * Return: NULL on failure. node containing the value on success
@@ -20,7 +20,7 @@ k = 0;
 do {
 prv = list;
 k++;
-idx = k * m;
+idx = k *m;
 while (list->next && list->index < idx)
 list = list->next;
 if (list->next == NULL && idx != list->index)
