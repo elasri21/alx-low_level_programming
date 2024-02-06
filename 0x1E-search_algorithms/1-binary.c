@@ -35,7 +35,7 @@ if (array == NULL)
 return (-1);
 printf("Searching in array: ");
 print_a(array, l, r);
-while (l < r)
+while (l <= r)
 {
 mid = (l + r) / 2;
 if (value == array[mid])
@@ -44,13 +44,13 @@ else if (value > array[mid])
 {
 l = mid + 1;
 printf("Searching in array: ");
-print_a(array, l, r);
+print_a(array, mid + 1, r);
 }
 else if (value < array[mid])
 {
 r = mid - 1;
 printf("Searching in array: ");
-print_a(array, l, r);
+print_a(array, l, mid - 1);
 }
 }
 return (-1);
