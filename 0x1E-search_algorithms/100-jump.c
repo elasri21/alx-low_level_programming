@@ -22,7 +22,7 @@ if (array[idx] == value)
 return (idx);
 k++;
 prv = idx;
-idx = k * m;
+idx = k *m;
 } while (idx < (int)size && array[idx] < value);
 printf("Value found between indexes [%d] and [%d]\n", prv, idx);
 for (; prv <= idx && prv < (int)size; prv++)
